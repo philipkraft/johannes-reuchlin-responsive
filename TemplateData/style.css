@@ -1,27 +1,37 @@
 html {
     box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
-html, body {
+
+html,
+body {
     height: 100%;
 }
+
 canvas {
     display: block;
 }
+
 body {
     margin: 0;
 }
+
 #unity-container {
     width: 100%;
     height: 100%;
 }
+
 #unity-canvas {
     width: 100%;
     height: 100%;
     background: #231F20;
 }
+
 #loading-cover {
     position: absolute;
     top: 0;
@@ -32,6 +42,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #unity-loading-bar {
     flex: 1 1 auto;
     display: flex;
@@ -39,12 +50,15 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #unity-logo {
     text-align: center;
 }
+
 #unity-logo img {
     max-width: 80%;
 }
+
 #unity-progress-bar-empty {
     width: 80%;
     height: 24px;
@@ -53,14 +67,17 @@ body {
     border: 1px solid white;
     padding: 2px;
 }
+
 #unity-progress-bar-full {
     width: 0%;
     height: 100%;
     background: white;
 }
+
 .light #unity-progress-bar-empty {
     border-color: black;
 }
+
 .light #unity-progress-bar-full {
     background: black;
 }
@@ -75,31 +92,66 @@ body {
     background-size: contain;
 }
 
+#footer {
+    height: 64px;
+    width: 100%;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    display: flex;
+    color: white;
+    flex-direction: row;
+
+
+}
+
+#footer span {
+    flex: 1;
+    margin: 0 12px;
+}
+
+#footer #nav {
+    float: right;
+}
+
+#footer a:any-link {
+    margin: 0 12px;
+    color: white;
+    border: none;
+
+}
+
+#footer a:any-link::after {
+    display: none;
+}
+
 .spinner,
 .spinner:after {
-  border-radius: 50%;
-  width: 5em;
-  height: 5em;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
 }
+
 .spinner {
-  margin: 10px;
-  font-size: 10px;
-  position: relative;
-  text-indent: -9999em;
-  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-left: 1.1em solid #ffffff;
-  transform: translateZ(0);
-  animation: spinner-spin 1.1s infinite linear;
+    margin: 10px;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid #ffffff;
+    transform: translateZ(0);
+    animation: spinner-spin 1.1s infinite linear;
 }
+
 @keyframes spinner-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
-
-
